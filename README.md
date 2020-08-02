@@ -45,3 +45,9 @@ Available Commands:
   unalias <name>            Delete an alias
   deactivate                Deactivates svm in the current shell
 ```
+
+#### .svmrc support
+
+You may find it useful to be able to use a specific version of solc for each project, and to not have to remember each time. To do this, in a given project directory execute `echo $version > .svmrc`, replacing `$version` with the version you want to use for the current project. Then, in future, execute `svm use` in the same directory to use the specified Solidity version. 
+
+To automatically run `svm use` wherever a `.svmrc` file exists, see [this StackOverflow question](https://stackoverflow.com/questions/23556330/run-nvm-use-automatically-every-time-theres-a-nvmrc-file-on-the-directory).
