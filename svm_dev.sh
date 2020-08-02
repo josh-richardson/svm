@@ -1,6 +1,8 @@
+SVM_PATH=$(readlink -f './build/libs/tech.richardson.svm.mainkt')
+
 svm() {
   temporaryFile=$(mktemp /tmp/svm-eval.XXXXXX)
-  TEMPFILE=$temporaryFile ./build/libs/tech.richardson.svm.mainkt "$@"
+  TEMPFILE=$temporaryFile $SVM_PATH "$@"
   local exit_code=$?
   eval "$(cat "$temporaryFile")"
   rm -f "$temporaryFile"
