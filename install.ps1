@@ -4,7 +4,7 @@ $PSDefaultParameterValues['*:ErrorAction']='Stop'
 [Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12
 $ProgressPreference = 'SilentlyContinue'
 
-$svm_version="0.1.2"
+$svm_version="0.1.3"
 $svm_home="$env:USERPROFILE\.svm"
 New-Item -Force -ItemType directory -Path $svm_home | Out-Null
 Write-Host "Downloading svm version $svm_version"
